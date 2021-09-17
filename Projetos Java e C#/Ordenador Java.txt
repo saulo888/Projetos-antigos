@@ -1,0 +1,905 @@
+src.br.unip.model:
+Arquivo:
+package br.unip.model;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class Arquivo {
+	
+	
+
+	public static String read(String path) {
+		String content = "";
+		try {
+			FileReader file = new FileReader(path);
+			BufferedReader readFile = new BufferedReader(file);
+			String line = "";
+			try {
+				line = readFile.readLine();
+				while (line != null) {
+					content += line + "\n";
+					line = readFile.readLine();
+				}
+				file.close();
+			} catch (IOException ex) {
+				return "Não foi possível ler o arquivo!!!";
+			}
+		} catch (FileNotFoundException ex) {
+			return "Arquivo não encontrado!";
+		}
+		return content;
+	}
+
+	public static boolean write(String path, String text) {
+		try {
+			FileWriter file = new FileWriter(path);
+			PrintWriter writeFile = new PrintWriter(file);
+			writeFile.println(text);
+			writeFile.close();
+			return true;
+		} catch (IOException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+}
+Dados
+package br.unip.model;
+public class Dados {
+	private String Codigo, Municipio, Estado, CodigoPrestador;
+	private String prestador, siglaPrestador, tipoServico;
+	private int populacaoTotal, populacaoTotalAtendida;
+	private double consumo, pH;
+	public String getCodigo() {
+		return Codigo;
+	}
+	public void setCodigo(String codigo) {
+		Codigo = codigo;
+	}
+	public String getMunicipio() {
+		return Municipio;
+	}
+	public void setMunicipio(String municipio) {
+		Municipio = municipio;
+	}
+	public String getEstado() {
+		return Estado;
+	}
+	public void setEstado(String estado) {
+		Estado = estado;
+	}
+	public String getCodigoPrestador() {
+		return CodigoPrestador;
+	}
+	public void setCodigoPrestador(String codigoPrestador) {
+		CodigoPrestador = codigoPrestador;
+	}
+	public String getSiglaPrestador() {
+		return siglaPrestador;
+	}
+	public void setSiglaPrestador(String siglaPrestador) {
+		this.siglaPrestador = siglaPrestador;
+	}
+	public String getTipoServico() {
+		return tipoServico;
+	}
+	public void setTipoServico(String tipoServico) {
+		this.tipoServico = tipoServico;
+	}
+	public int getPopulacaoTotal() {
+		return populacaoTotal;
+	}
+	public void setPopulacaoTotal(int populacaoTotal) {
+		this.populacaoTotal = populacaoTotal;
+	}
+	public int getPopulacaoTotalAtendida() {
+		return populacaoTotalAtendida;
+	}
+	public void setPopulacaoTotalAtendida(int populacaoTotalAtendida) {
+		this.populacaoTotalAtendida = populacaoTotalAtendida;
+	}
+	public double getConsumo() {
+		return consumo;
+	}
+	public void setConsumo(double consumo) {
+		this.consumo = consumo;
+	}
+	public double getpH() {
+		return pH;
+	}
+	public void setpH(double pH) {
+		this.pH = pH;
+	}
+	public String getPrestador() {
+		return prestador;
+	}
+	public void setPrestador(String prestador) {
+		this.prestador = prestador;
+	}
+}
+
+DadosTableModel
+package br.unip.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+import javax.swing.table.AbstractTableModel;
+
+public class DadosTableModel extends AbstractTableModel {
+
+	private List<Dados> dados = new ArrayList<>();
+	private String[] colunas = { "Codigo", "Municio", "Estado", "Codigo Prestador", "Prestador", "Sigla Prestador",
+			"Tipo Serviço", "População Total", "População Total Atendida", "Consumo", "pH" };
+
+	@Override
+	public String getColumnName(int column) {
+		return colunas[column];
+	}
+
+	@Override
+	public int getColumnCount() {
+		return colunas.length;
+	}
+
+	@Override
+	public int getRowCount() {
+		return dados.size();
+	}
+
+	@Override
+	public Object getValueAt(int linha, int coluna) {
+		switch (coluna) {
+		case 0:
+			return dados.get(linha).getCodigo();
+		case 1:
+			return dados.get(linha).getMunicipio();
+		case 2:
+			return dados.get(linha).getEstado();
+		case 3:
+			return dados.get(linha).getCodigoPrestador();
+		case 4:
+			return dados.get(linha).getPrestador();
+		case 5:
+			return dados.get(linha).getSiglaPrestador();
+		case 6:
+			return dados.get(linha).getTipoServico();
+		case 7:
+			return dados.get(linha).getPopulacaoTotal();
+		case 8:
+			return dados.get(linha).getPopulacaoTotalAtendida();
+		case 9:
+			return dados.get(linha).getConsumo();
+		case 10:
+			return dados.get(linha).getpH();
+		}
+
+		return null;
+	}
+	
+	@Override
+	public void setValueAt(Object valor, int linha, int coluna) {
+
+		try {
+		switch (coluna) {
+		case 0:
+			dados.get(linha).setCodigo((String) valor);
+			break;
+		case 1:
+			dados.get(linha).setMunicipio((String) valor);
+			break;
+		case 2:
+			dados.get(linha).setEstado((String) valor);
+			break;
+		case 3:
+			dados.get(linha).setCodigoPrestador((String) valor);
+			break;
+		case 4:
+			dados.get(linha).setPrestador((String) valor);
+			break;
+		case 5:
+			dados.get(linha).setSiglaPrestador((String) valor);
+			break;
+		case 6:
+			dados.get(linha).setTipoServico((String) valor);
+			break;
+		case 7:
+			dados.get(linha).setPopulacaoTotal(Integer.parseInt((String) valor));
+			break;
+		case 8:
+			dados.get(linha).setPopulacaoTotalAtendida(Integer.parseInt((String) valor));
+			break;
+		case 9:
+			dados.get(linha).setConsumo(Double.parseDouble((String) valor));
+			break;
+		case 10:
+			dados.get(linha).setpH(Double.parseDouble((String) valor));
+			break;
+			
+		}
+		this.fireTableCellUpdated(linha, coluna);
+		}
+		catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "ERRO NO TIPO DE VALOR!!!");
+		}
+		
+	}
+
+	@Override
+	public boolean isCellEditable(int linha, int coluna) {
+		boolean teste = false;
+		if (coluna == 0 || coluna == 3) {
+			teste = false;
+		}
+		else {
+			teste = true;
+			this.fireTableCellUpdated(linha, coluna);
+		}
+		return teste;
+	}
+
+	public void addRow(Dados d) {
+		this.dados.add(d);
+		this.fireTableDataChanged();
+	}
+
+	public void removeRow(int linha) {
+		this.dados.remove(linha);
+		this.fireTableRowsDeleted(linha, linha);
+	}
+
+}
+
+br.unip.view:
+TelaCrud:
+package br.unip.view;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.EtchedBorder;
+
+import br.unip.model.Arquivo;
+import br.unip.model.Dados;
+import br.unip.model.DadosTableModel;
+
+public class TelaCrud extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtCodMun;
+	private JTextField txtMun;
+	private JTextField txtEstado;
+	private JTextField txtCodPrest;
+	private JTextField txtPrestador;
+	private JTextField txtSiglaPrest;
+	private JTextField txtTipoServ;
+	private JLabel lblPopTotal;
+	private JTextField txtPopTotal;
+	private JTextField txtPopTotalAten;
+	private JTextField txtConsumo;
+	private JTextField txtPH;
+	private File arquivo;
+	private BufferedReader leitor = null;
+	private JTable tblTabela;
+	private DadosTableModel tableModel = new DadosTableModel();
+	private String linha = "";
+	private String[] campos = new String[11];
+
+	private void adicionaValores(String[] valores) {
+		Dados dados = new Dados();
+		dados.setCodigo(valores[0]);
+		dados.setMunicipio(valores[1]);
+		dados.setEstado(valores[2]);
+		dados.setCodigoPrestador(valores[3]);
+		dados.setPrestador(valores[4]);
+		dados.setSiglaPrestador(valores[5]);
+		dados.setTipoServico(valores[6]);
+		dados.setPopulacaoTotal(Integer.parseInt(valores[7]));
+		dados.setPopulacaoTotalAtendida(Integer.parseInt(valores[8]));
+		dados.setConsumo(Double.parseDouble(valores[9]));
+		dados.setpH(Double.parseDouble(valores[10]));
+		tableModel.addRow(dados);
+	}
+
+	private boolean camposIsNull() { // Método para verificar há pelo menos um campo preenchido para pesquisa
+		if (txtCodMun == null && txtMun == null && txtEstado == null && txtCodPrest == null && txtPrestador == null
+				&& txtSiglaPrest == null && txtTipoServ == null && txtPopTotal == null && txtPopTotalAten == null
+				&& txtConsumo == null && txtPH == null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public TelaCrud(TelaInicial tela, File file) {
+		this.arquivo = file;
+		try { // pega o arquivo dado no parâmetro e tenta lê-lo para colocar os dados na tabela
+			leitor = new BufferedReader(new FileReader(arquivo));
+			while ((linha = leitor.readLine()) != null) {
+				String[] dado = linha.split("\t");
+				adicionaValores(dado);
+			}
+
+		} catch (FileNotFoundException e) {
+			System.out.println("ERRO arquivo não encontrado: " + e.getMessage());
+		} catch (IOException e) {
+			System.out.println("IO erro: " + e.getMessage());
+		} finally {
+			if (leitor != null) {
+				try {
+					leitor.close();
+				} catch (IOException e) {
+					System.out.println("erro de io: " + e.getMessage());
+				}
+			}
+		}
+
+		setTitle("Saneamento Brasil");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1018, 630);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+
+		JPanel pnlFiltro = new JPanel();
+		pnlFiltro.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+		pnlFiltro.setBounds(12, 48, 245, 482);
+		contentPane.add(pnlFiltro);
+		pnlFiltro.setLayout(new GridLayout(0, 2, 0, 22));
+
+		JLabel lblCodigo = new JLabel("C\u00F3digo"); // alguns códigos vão ter uns símbolos estranhos, mas isso significa que são letras com acentuação
+		pnlFiltro.add(lblCodigo);
+
+		txtCodMun = new JTextField();
+		pnlFiltro.add(txtCodMun);
+		txtCodMun.setColumns(10);
+
+		JLabel lblMunicipio = new JLabel("Municipio");
+		pnlFiltro.add(lblMunicipio);
+
+		txtMun = new JTextField();
+		pnlFiltro.add(txtMun);
+		txtMun.setColumns(10);
+
+		JLabel lblEstado = new JLabel("Estado");
+		pnlFiltro.add(lblEstado);
+
+		txtEstado = new JTextField();
+		pnlFiltro.add(txtEstado);
+		txtEstado.setColumns(10);
+
+		JLabel lblCodPrest = new JLabel("Cod. Prest");
+		lblCodPrest.setToolTipText("C\u00F3digo do Prestador");
+		pnlFiltro.add(lblCodPrest);
+
+		txtCodPrest = new JTextField();
+		pnlFiltro.add(txtCodPrest);
+		txtCodPrest.setColumns(10);
+
+		JLabel lblPrestador = new JLabel("Prestador");
+		pnlFiltro.add(lblPrestador);
+
+		txtPrestador = new JTextField();
+		pnlFiltro.add(txtPrestador);
+		txtPrestador.setColumns(10);
+
+		JLabel lblSiglaPrest = new JLabel("Sigla Prest.");
+		lblSiglaPrest.setToolTipText("Sigla do Prestador");
+		pnlFiltro.add(lblSiglaPrest);
+
+		txtSiglaPrest = new JTextField();
+		pnlFiltro.add(txtSiglaPrest);
+		txtSiglaPrest.setColumns(10);
+
+		JLabel lblTipoServ = new JLabel("Tipo Serv.");
+		lblTipoServ.setToolTipText("Tipo de Servi\u00E7o");
+		pnlFiltro.add(lblTipoServ);
+
+		txtTipoServ = new JTextField();
+		pnlFiltro.add(txtTipoServ);
+		txtTipoServ.setColumns(10);
+
+		lblPopTotal = new JLabel("Popula\u00E7\u00E3o Total");
+		pnlFiltro.add(lblPopTotal);
+
+		txtPopTotal = new JTextField();
+		pnlFiltro.add(txtPopTotal);
+		txtPopTotal.setColumns(10);
+
+		JLabel lblPopTotalAten = new JLabel("Popula\u00E7\u00E3o Tot. Atendida");
+		lblPopTotalAten.setToolTipText("Popula\u00E7\u00E3o Total Atendida");
+		pnlFiltro.add(lblPopTotalAten);
+
+		txtPopTotalAten = new JTextField();
+		pnlFiltro.add(txtPopTotalAten);
+		txtPopTotalAten.setColumns(10);
+
+		JLabel lblConsumo = new JLabel("Consumo");
+		pnlFiltro.add(lblConsumo);
+
+		txtConsumo = new JTextField();
+		pnlFiltro.add(txtConsumo);
+		txtConsumo.setColumns(10);
+
+		JLabel lblPh = new JLabel("pH");
+		pnlFiltro.add(lblPh);
+
+		txtPH = new JTextField();
+		pnlFiltro.add(txtPH);
+		txtPH.setColumns(10);
+
+		JTextField[] camposTextos = { txtCodMun, txtMun, txtEstado, txtCodPrest, txtPrestador, txtSiglaPrest,
+				txtTipoServ, txtPopTotal, txtPopTotalAten, txtConsumo, txtPH };
+
+		JButton btnBuscar = new JButton("Buscar");
+		btnBuscar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) { // botão buscar verifica há pelo menos um campo escrito e faz a busca na tabela 
+				for (int n = 0; n < camposTextos.length; n++) {
+					campos[n] = camposTextos[n].getText();
+				}
+
+				tblTabela.clearSelection();
+				for (int i = 0; i < tableModel.getRowCount(); i++) {
+					for (int j = 0; j < tableModel.getColumnCount(); j++) {
+						if (tableModel.getValueAt(i, j).equals(campos[j])) {
+							tblTabela.changeSelection(i, j, true, false);
+						}
+					}
+				}
+
+			}
+		});
+		btnBuscar.setBounds(12, 541, 75, 23);
+		contentPane.add(btnBuscar);
+
+		JButton btnInserir = new JButton("Inserir");
+		btnInserir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				// botao inserir tenta adicionar um dado novo 
+				// na tabela lançando erro caso algum dado esteja 
+				// fora dos padrões (int pra string por exemplo) 
+				// ou caso os campos não foram preenchidos com alguma informação
+				try {
+					if (!camposIsNull()) {
+						Dados dados = new Dados();
+						dados.setCodigo(txtCodMun.getText());
+						dados.setMunicipio(txtMun.getText());
+						dados.setEstado(txtEstado.getText());
+						dados.setCodigoPrestador(txtCodPrest.getText());
+						dados.setPrestador(txtPrestador.getText());
+						dados.setSiglaPrestador(txtSiglaPrest.getText());
+						dados.setTipoServico(txtTipoServ.getText());
+						dados.setPopulacaoTotal(Integer.parseInt(txtPopTotal.getText()));
+						dados.setPopulacaoTotalAtendida(Integer.parseInt(txtPopTotalAten.getText()));
+						dados.setConsumo(Double.parseDouble(txtConsumo.getText()));
+						dados.setpH(Double.parseDouble(txtPH.getText()));
+						tableModel.addRow(dados);
+					} else {
+						JOptionPane.showMessageDialog(null, "Preencha todos os campos!!");
+					}
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(null, "Preencha corretamente!");
+				}
+			}
+		});
+		btnInserir.setBounds(97, 541, 75, 23);
+		contentPane.add(btnInserir);
+
+		JButton btnApagar = new JButton("Apagar");
+		btnApagar.addActionListener(new ActionListener() { // botão apaga o dado selecionado ( caso haja mais de um ele apaga o primeiro)
+			public void actionPerformed(ActionEvent arg0) {
+				if (tblTabela.getSelectedRow() != -1) {
+					tableModel.removeRow(tblTabela.getSelectedRow());
+				}
+			}
+		});
+		btnApagar.setBounds(182, 541, 75, 23);
+		contentPane.add(btnApagar);
+
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(267, 47, 726, 482);
+		contentPane.add(scrollPane);
+
+		tblTabela = new JTable();
+		tblTabela.setModel(tableModel);
+		tableModel.isCellEditable(tblTabela.getSelectedRow(), tblTabela.getSelectedColumn()); // é possível editar um dado na tabela clicando nele duas vezes
+		scrollPane.setViewportView(tblTabela);
+
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 1002, 23);
+		contentPane.add(menuBar);
+
+		JMenu mnMenu = new JMenu("Menu");
+		menuBar.add(mnMenu);
+
+		JMenuItem mntmVoltar = new JMenuItem("Voltar");
+		mntmVoltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaCrud.this.dispose();
+				tela.setVisible(true);
+
+			}
+		});
+		mnMenu.add(mntmVoltar);
+
+		JMenuItem mntmSalvar = new JMenuItem("Salvar");
+		mntmSalvar.addActionListener(new ActionListener() { // botão salvar altera o arquivo de texto dado como parâmetro no construtor
+			public void actionPerformed(ActionEvent arg0) {
+				String conteudo = "";
+				for (int i = 0; i < tableModel.getRowCount(); i++) {
+					for (int j = 0; j < tableModel.getColumnCount(); j++) {
+						conteudo += tableModel.getValueAt(i, j);
+						if (j != tableModel.getColumnCount() - 1) {
+							conteudo += "\t";
+						}
+					}
+					if (i != tableModel.getRowCount() - 1) {
+						conteudo += "\n";
+					}
+				}
+				Arquivo.write(file.getAbsolutePath(), conteudo);
+			}
+		});		mnMenu.add(mntmSalvar);
+
+		JMenuItem mntmSair = new JMenuItem("Sair");
+		mntmSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
+		mnMenu.add(mntmSair);
+
+	}
+
+}
+
+TelaInicial:
+package br.unip.view;
+
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.File;
+
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JToggleButton;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.EtchedBorder;
+
+import br.unip.model.Arquivo;
+
+public class TelaInicial extends JFrame {
+	private JPanel contentPane;
+	private JLabel lblAviso = new JLabel("");
+	private JToggleButton tglbtnSort = new JToggleButton("Ordernar");
+	private JButton btnCrud = new JButton("CRUD");
+	private File entrada;
+	private Arquivo file;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) { // método criado pelo WindowBuilder e Swing Designer utilizado para esta classe ser a principal
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					TelaInicial frame = new TelaInicial();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public TelaInicial() {
+		setResizable(false);
+		setTitle("Saneamento Brasil");
+
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 466, 369);
+
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+
+		JMenu mnFile = new JMenu("File");
+		menuBar.add(mnFile);
+
+		JMenuItem mntmOpen = new JMenuItem("Open");
+		mntmOpen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) { // este item do menu irá fazer abrir a tela de seleção de arquivos lançando um erro se o usuario n escolher um arquivo com nome entrada.txt ou mergeSort.txt ou quickSort.txt
+				try {
+					JFileChooser escolhaArquivo = new JFileChooser();
+					escolhaArquivo.showOpenDialog(null);
+					if (escolhaArquivo.getSelectedFile().getName().equals("entrada.txt")
+							|| escolhaArquivo.getSelectedFile().getName().equals("quicksort.txt")
+							|| escolhaArquivo.getSelectedFile().getName().equals("mergesort.txt")) {
+						entrada = new File(escolhaArquivo.getSelectedFile(), "");
+						lblAviso.setText(entrada.getPath());
+						tglbtnSort.setEnabled(true);
+						btnCrud.setEnabled(true);
+					} else {
+						JOptionPane.showMessageDialog(null,
+								"Erro no nome do arquivo selecionar entrada.txt ou (algoritmo_de_ordenacao).txt");
+					}
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(null, "ERRO AO ABRIR/CRIAR PROGRAMA");
+				}
+			}
+		});
+		mnFile.add(mntmOpen);
+		contentPane = new JPanel();
+
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+
+		JPanel pnlDiretorio = new JPanel();
+		pnlDiretorio.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+		pnlDiretorio.setBounds(51, 11, 348, 82);
+		contentPane.add(pnlDiretorio);
+		pnlDiretorio.setLayout(null);
+
+		lblAviso = new JLabel("Não Informado");
+		lblAviso.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAviso.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblAviso.setBounds(10, 34, 306, 14);
+		pnlDiretorio.add(lblAviso);
+
+		JPanel pnlBotoes = new JPanel();
+		pnlBotoes.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+		pnlBotoes.setBounds(51, 104, 348, 194);
+		contentPane.add(pnlBotoes);
+		pnlBotoes.setLayout(null);
+		btnCrud.addActionListener(new ActionListener() { // este botão leva para a tela de CRUD do programa levando com parâmetro o arquivo selecionado
+			public void actionPerformed(ActionEvent e) {
+				TelaCrud crud = new TelaCrud(TelaInicial.this, entrada);
+				TelaInicial.this.dispose();
+				crud.setVisible(true);
+			}
+		});
+
+		btnCrud.setEnabled(false);
+		btnCrud.setBounds(121, 62, 89, 23);
+		pnlBotoes.add(btnCrud);
+
+		JButton btnMerge = new JButton("Merge");
+		btnMerge.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) { // este botão irá fazer a ordenação por mergeSort 
+				try {
+					long all_startime = System.nanoTime();
+					File saida = new File(entrada.getParent() + "//mergesort.txt");
+					File tempoLog = new File(entrada.getParent() +"//mergeSortTempo.txt");
+					tempoLog.createNewFile();
+					saida.createNewFile();
+					String merge = file.read(entrada.getAbsolutePath());
+					String[] mergeA = merge.split("\n");
+					String[][] mergeB = new String[mergeA.length][11];
+					String[][] aux = mergeB.clone();
+
+					for (int i = 0; i < mergeA.length; i++) {
+						for (int j = 0; j < mergeA.length; j++) {
+							mergeB[i] = mergeA[i].split("\n");
+							mergeB[j] = mergeA[j].split("\t");
+						}
+					}
+
+					merge = "";
+					long merge_startime = System.nanoTime();
+					mergeSort(mergeB, aux, 0, mergeB.length - 1);
+					long merge_time = ((System.nanoTime() - merge_startime) / 1000000);
+					for (int i = 0; i < mergeB.length; i++) {
+						for (int j = 0; j < 11; j++) {
+							if (j != 10)
+								merge += mergeB[i][j] + "\t";
+							else
+								merge += mergeB[i][j];
+						}
+						if (i != mergeB.length - 1)
+							merge += "\n";
+					}
+
+					file.write(saida.getAbsolutePath(), merge);
+					long all_time = ((System.nanoTime() - all_startime) / 1000000000);
+					JOptionPane.showMessageDialog(null, "Ordenado com sucesso!\nDuração: " + all_time
+							+ " segundos\nDuração ordernação: " + merge_time + " ms");
+					Arquivo.write(tempoLog.getAbsolutePath(), Arquivo.read(tempoLog.getAbsolutePath()) + "Duração da ordenação: " + merge_time + " ms\n");
+					
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(null, "ERRO !!!");
+					e.printStackTrace();
+				}
+			}
+		});
+		btnMerge.setVisible(false);
+		btnMerge.setBounds(235, 12, 73, 23);
+		pnlBotoes.add(btnMerge);
+
+		JButton btnQuick = new JButton("Quick");
+		btnQuick.addActionListener(new ActionListener() { // e este irá fazer por quickSort
+			public void actionPerformed(ActionEvent arg0) { 
+				try {
+					long startime = System.nanoTime();
+					File saida = new File(entrada.getParent() + "//quicksort.txt");
+					File tempoLog = new File(entrada.getParent() +"//quickSortTempo.txt");
+					tempoLog.createNewFile();
+					saida.createNewFile();
+					String quick = file.read(entrada.getAbsolutePath());
+					String[] quickA = quick.split("\n");
+					String[][] quickB = new String[quickA.length][11];
+					for (int i = 0; i < quickA.length; i++) {
+						for (int j = 0; j < quickA.length; j++) {
+							quickB[i] = quickA[i].split("\n");
+							quickB[j] = quickA[j].split("\t");
+						}
+					}
+					quick = "";
+					long quick_startime = System.nanoTime();
+					quickSort(quickB, 0, quickB.length - 1);
+					long quick_time = ((System.nanoTime() - quick_startime) / 1000000);
+					for (int i = 0; i < quickB.length; i++) {
+						for (int j = 0; j < 11; j++) {
+							if (j != 10)
+								quick += quickB[i][j] + "\t";
+							else
+								quick += quickB[i][j];
+						}
+						if (i != quickB.length - 1)
+							quick += "\n";
+					}
+					file.write(saida.getAbsolutePath(), quick);
+					long all_time = ((System.nanoTime() - startime) / 1000000000);
+					JOptionPane.showMessageDialog(null, "Ordenado com sucesso!\nDuração: " + all_time
+							+ " segundos\nDuração ordernação: " + quick_time + " ms");
+					Arquivo.write(tempoLog.getAbsolutePath(), Arquivo.read(tempoLog.getAbsolutePath()) + "Duração da ordenação: " + quick_time + " ms\n");
+					
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(null, "ERRO !!!");
+				}
+			}
+		});
+		btnQuick.setVisible(false);
+		btnQuick.setBounds(235, 46, 73, 23);
+		pnlBotoes.add(btnQuick);
+
+		tglbtnSort.setEnabled(false);
+		tglbtnSort.addMouseListener(new MouseAdapter() { // caso o botao de ordenação esteja ativado, estes eventos a seguir servem para caso o mouse passe por cima e aparecer outros dois botões
+														// e se clicar o botão fica pressionado deixando os dois botões a mostra até ele ser clicado de novo
+			@Override
+			public void mouseEntered(MouseEvent ev) {
+				if (tglbtnSort.isEnabled()) {
+					btnMerge.setVisible(true);
+					btnQuick.setVisible(true);
+				}
+			}
+
+			@Override
+			public void mouseExited(MouseEvent ev) {
+				if (!tglbtnSort.isSelected()) {
+					btnMerge.setVisible(false);
+					btnQuick.setVisible(false);
+				}
+
+			}
+		});
+		tglbtnSort.setBounds(121, 28, 89, 23);
+		pnlBotoes.add(tglbtnSort);
+		addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				tglbtnSort.setSelected(false);
+				btnMerge.setVisible(false);
+				btnQuick.setVisible(false);
+			}
+		});
+	}
+
+	private static void mergeSort(String[][] v, String[][] aux, int first, int last) {
+		if (first < last) {
+			int mid = (first + last) / 2;
+			mergeSort(v, aux, first, mid);
+			mergeSort(v, aux, mid + 1, last);
+			putIn(v, aux, first, mid, last);
+		}
+	}
+
+	private static void putIn(String[][] v, String[][] aux, int first, int mid, int last) {
+		for (int i = first; i <= last; i++) {
+			aux[i] = v[i];
+		}
+		int left = first;
+		int right = mid + 1;
+		for (int k = first; k <= last; k++) {
+			if (left > mid)
+				v[k] = aux[right++];
+			else if (right > last)
+				v[k] = aux[left++];
+			else if (Integer.parseInt(aux[left][0]) < Integer.parseInt(aux[right][0])) { // 0 = coluna no qual quer
+																							// ordenar
+				for (int i = 0; i < aux.length; i++) {
+					v[k] = aux[left];
+				}
+				left++;
+			} else {
+				for (int i = 0; i < aux.length; i++) {
+					v[k] = aux[right];
+				}
+				right++;
+			}
+		}
+	}
+
+	private static void quickSort(String v[][], int l, int r) {
+		int left = l;
+		int right = r;
+		int pivo = Integer.parseInt(v[(left + right) / 2][0]);
+		while (left <= right) {
+			while (Integer.parseInt(v[left][0]) < pivo) {
+				left = left + 1;
+			}
+			while (Integer.parseInt(v[right][0]) > pivo) {
+				right = right - 1;
+			}
+			if (left <= right) {
+				swap(v, left, right);
+				left = left + 1;
+				right = right - 1;
+			}
+		}
+		if (right > l)
+			quickSort(v, l, right);
+
+		if (left < r)
+			quickSort(v, left, r);
+
+	}
+
+	private static void swap(String v[][], int n1, int n2) {
+		String[] aux = v[n1];
+		v[n1] = v[n2];
+		v[n2] = aux;
+	}
+}

@@ -1,0 +1,2027 @@
+package visual;
+// Classe gerada pelo framework
+public class TelaInicial extends javax.swing.JFrame {
+    public TelaInicial() {      
+        initComponents();
+        setLocationRelativeTo(null);
+    }
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+        jPanel2 = new javax.swing.JPanel();
+        btnTresJogadores = new javax.swing.JButton();
+        btnQuatroJogadores = new javax.swing.JButton();
+        btnDoisJogadores = new javax.swing.JButton();
+        btnSair = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Dinheiro x Meio Ambiente");
+        setBackground(new java.awt.Color(0, 0, 0));
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setResizable(false);
+        jPanel2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 204, 204)));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+        btnTresJogadores.setText("3 Jogadores");
+        btnTresJogadores.setEnabled(false);
+        btnQuatroJogadores.setText("4 Jogadores");
+        btnQuatroJogadores.setEnabled(false);
+        btnDoisJogadores.setText("2 Jogadores");
+        btnDoisJogadores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDoisJogadoresActionPerformed(evt);
+            }
+        });
+        btnSair.setText("Sair");
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+.addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+.addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnQuatroJogadores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnTresJogadores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnDoisJogadores)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(btnSair)))
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(btnDoisJogadores)
+                .addGap(18, 18, 18)
+                .addComponent(btnTresJogadores)
+                .addGap(18, 18, 18)
+                .addComponent(btnQuatroJogadores)      .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(btnSair)
+                .addGap(21, 21, 21))
+        );
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 0));
+        jLabel1.setText("Dinheiro x Meio Ambiente")
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup( layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(114, 114, 114)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(71, 71, 71)))
+                .addContainerGap(114, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(  layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(40, 40, 40)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
+        );
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+    // Quando clicar no botão "Dois Jogadores" na tela ele abre uma janela dos sorteios de cor e profissão.
+    private void btnDoisJogadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoisJogadoresActionPerformed
+        SorteioProfissaoDoisJogadores dialog = new SorteioProfissaoDoisJogadores(new javax.swing.JFrame(), true);
+        dispose();
+        dialog.setVisible(true);
+    }//GEN-LAST:event_btnDoisJogadoresActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+java.util.logging.Logger.getLogger(TelaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+java.util.logging.Logger.getLogger(TelaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+java.util.logging.Logger.getLogger(TelaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+java.util.logging.Logger.getLogger(TelaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {               
+                new TelaInicial().setVisible(true);
+            }
+        });
+    }
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDoisJogadores;
+    private javax.swing.JButton btnQuatroJogadores;
+    private javax.swing.JButton btnSair;
+    private javax.swing.JButton btnTresJogadores;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel2;
+    // End of variables declaration//GEN-END:variables
+}
+
+package visual;
+
+import java.util.Random;
+import classes.*;
+
+// Classe gerada pelo framework
+public class SorteioProfissaoDoisJogadores extends javax.swing.JDialog {
+    // Objetos da classe Jogador para servir como parâmetro ao instanciar um objeto TelaPrincipal
+    private Jogador jUm;
+    private Jogador jDois;
+    public SorteioProfissaoDoisJogadores(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
+        initComponents();
+        setLocationRelativeTo(null);
+        
+    }
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        boxJUm = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        lblCorJUm = new javax.swing.JLabel();
+        lblProfissaoJUm = new javax.swing.JLabel();
+        btnSorteioJogadorUm = new javax.swing.JButton();
+        boxJDois = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        lblCorJDois = new javax.swing.JLabel();
+        lblProfissaoJDois = new javax.swing.JLabel();
+        btnSorteioJogadorDois = new javax.swing.JButton();
+        btnComecar = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Sorteio de Cores e Classes");
+        setMaximumSize(new java.awt.Dimension(537, 337));
+        setMinimumSize(new java.awt.Dimension(537, 337));
+        setResizable(false);
+        setSize(new java.awt.Dimension(0, 0));
+
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setMaximumSize(new java.awt.Dimension(537, 337));
+        jPanel1.setMinimumSize(new java.awt.Dimension(537, 337));
+        jPanel1.setPreferredSize(new java.awt.Dimension(537, 337));
+
+        boxJUm.setBackground(new java.awt.Color(0, 0, 0));
+        boxJUm.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Jogador 1", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(255, 255, 255))); // NOI18N
+        boxJUm.setForeground(new java.awt.Color(255, 255, 255));
+        boxJUm.setToolTipText("");
+        boxJUm.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        boxJUm.setMaximumSize(new java.awt.Dimension(230, 183));
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Cor:");
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Profissão:");
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Dinheiro: 20");
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Pontos Ambientais: 0");
+
+        lblCorJUm.setForeground(new java.awt.Color(255, 255, 255));
+        lblCorJUm.setText("Nenhuma");
+
+        lblProfissaoJUm.setForeground(new java.awt.Color(255, 255, 255));
+        lblProfissaoJUm.setText("Nenhuma");
+
+        javax.swing.GroupLayout boxJUmLayout = new javax.swing.GroupLayout(boxJUm);
+        boxJUm.setLayout(boxJUmLayout);
+        boxJUmLayout.setHorizontalGroup(
+            boxJUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(boxJUmLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(boxJUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(boxJUmLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblCorJUm))
+                    .addGroup(boxJUmLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblProfissaoJUm))
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        boxJUmLayout.setVerticalGroup(
+            boxJUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(boxJUmLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(boxJUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(lblCorJUm))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED) .addGroup(boxJUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(lblProfissaoJUm))
+.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)      .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addContainerGap(86, Short.MAX_VALUE))
+        );
+        btnSorteioJogadorUm.setBackground(new java.awt.Color(255, 255, 255));
+        btnSorteioJogadorUm.setText("Rolar dados");
+        btnSorteioJogadorUm.setBorder(new javax.swing.border.MatteBorder(null));
+        btnSorteioJogadorUm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSorteioJogadorUmActionPerformed(evt);
+            }
+        });
+        boxJDois.setBackground(new java.awt.Color(0, 0, 0));
+  boxJDois.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Jogador 2", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(255, 255, 255))); // NOI18N
+        boxJDois.setForeground(new java.awt.Color(255, 255, 255));
+        boxJDois.setMaximumSize(new java.awt.Dimension(230, 183));
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Pontos Ambientais: 0");
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Dinheiro: 20");
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Profissão:");
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Cor:");
+        lblCorJDois.setForeground(new java.awt.Color(255, 255, 255));
+        lblCorJDois.setText("Nenhuma");
+        lblProfissaoJDois.setForeground(new java.awt.Color(255, 255, 255));
+        lblProfissaoJDois.setText("Nenhuma");
+        javax.swing.GroupLayout boxJDoisLayout = new javax.swing.GroupLayout(boxJDois);
+        boxJDois.setLayout(boxJDoisLayout);
+        boxJDoisLayout.setHorizontalGroup(
+boxJDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(boxJDoisLayout.createSequentialGroup()
+                .addContainerGap() .addGroup(boxJDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(boxJDoisLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblCorJDois))
+                    .addGroup(boxJDoisLayout.createSequentialGroup()
+                        .addComponent(jLabel7)
+.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblProfissaoJDois))
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel5))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        boxJDoisLayout.setVerticalGroup( boxJDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(boxJDoisLayout.createSequentialGroup()
+                .addContainerGap()
+.addGroup(boxJDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(lblCorJDois))
+.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(boxJDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(lblProfissaoJDois))
+.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)      .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addContainerGap(86, Short.MAX_VALUE))
+        );
+        btnSorteioJogadorDois.setBackground(new java.awt.Color(255, 255, 255));
+        btnSorteioJogadorDois.setText("Rolar dados");
+        btnSorteioJogadorDois.setBorder(new javax.swing.border.MatteBorder(null));
+        btnSorteioJogadorDois.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSorteioJogadorDoisActionPerformed(evt);
+           }
+        })
+        btnComecar.setText("Começar");
+        btnComecar.setEnabled(false);
+        btnComecar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+              btnComecarActionPerformed(evt);
+            }
+        });
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+.addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(boxJUm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(95, 95, 95)
+                        .addComponent(btnSorteioJogadorUm, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                        .addGap(68, 68, 68)))
+                .addGap(27, 27, 27)
+.addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(boxJDois, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(25, 25, 25))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(btnSorteioJogadorDois, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                        .addGap(93, 93, 93))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(227, 227, 227)
+                .addComponent(btnComecar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+.addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(boxJUm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSorteioJogadorUm, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(boxJDois, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSorteioJogadorDois, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(40, 40, 40)
+                .addComponent(btnComecar)
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {boxJDois, boxJUm});
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(   layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+           .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        setBounds(0, 0, 553, 371);
+    }// </editor-fold>//GEN-END:initComponents
+    // Botão do jogador um para sorteiar cor e profissão
+    private void btnSorteioJogadorUmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSorteioJogadorUmActionPerformed
+        Random gerador = new Random();
+        int cor = gerador.nextInt(4);
+        int profissao = gerador.nextInt(3);
+        switch (cor) {
+            case 0:
+                if (lblCorJDois.getText() != "Preto") {
+                    lblCorJUm.setText("Preto");
+                } else {
+                    lblCorJUm.setText("Branco");
+                }
+                break;
+            case 1:
+                if (lblCorJDois.getText() != "Branco") {
+                    lblCorJUm.setText("Branco");
+                } else {
+                    lblCorJUm.setText("Preto");
+                }
+                break;
+            case 2:
+                if (lblCorJDois.getText() != "Azul") {
+                    lblCorJUm.setText("Azul");
+                } else {
+                    lblCorJUm.setText("Vermelho");
+                }
+                break;
+            case 3:
+                if (lblCorJDois.getText() != "Vermelho") {
+                    lblCorJUm.setText("Vermelho");
+                } else {
+                    lblCorJUm.setText("Azul");
+                }
+                break;
+        }
+        switch (profissao){
+            case 0:
+                lblProfissaoJUm.setText("Desempregado");
+                break;
+            case 1:
+                lblProfissaoJUm.setText("Cientista");
+                break;
+            case 2:
+                lblProfissaoJUm.setText("Empresario");
+                break;               
+        }
+        // só pode sorteiar uma vez depois o botão é desativado
+        btnSorteioJogadorUm.setEnabled(false);
+        // quando os dois botões estiverem desativados o botão "Começar" é ativado
+        if(!btnSorteioJogadorUm.isEnabled() && !btnSorteioJogadorDois.isEnabled())
+            btnComecar.setEnabled(true);
+    }//GEN-LAST:event_btnSorteioJogadorUmActionPerformed
+// Botão do jogador dois para sorteiar cor e profissão
+    private void btnSorteioJogadorDoisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSorteioJogadorDoisActionPerformed
+        Random gerador = new Random();
+        int cor = gerador.nextInt(4);
+        int profissao = gerador.nextInt(3);
+        switch (cor) {
+            case 0:
+                if (lblCorJUm.getText() != "Preto") {
+                    lblCorJDois.setText("Preto");
+                } else {
+                    lblCorJDois.setText("Branco");
+                }
+                break;
+            case 1:
+                if (lblCorJUm.getText() != "Branco") {
+                    lblCorJDois.setText("Branco");
+                } else {
+                    lblCorJDois.setText("Preto");
+                }
+                break;
+            case 2:
+                if (lblCorJUm.getText() != "Azul") {
+                    lblCorJDois.setText("Azul");
+                } else {
+                    lblCorJDois.setText("Vermelho");
+                }
+                break;
+            case 3:
+                if (lblCorJUm.getText() != "Vermelho") {
+                    lblCorJDois.setText("Vermelho");
+                } else {
+                    lblCorJDois.setText("Azul");
+                }
+                break;
+        }
+        switch (profissao){
+            case 0:
+                lblProfissaoJDois.setText("Desempregado");
+                break;
+            case 1:
+                lblProfissaoJDois.setText("Cientista");
+                break;
+            case 2:
+                lblProfissaoJDois.setText("Empresario");
+                break;               
+        }
+        // só pode sorteiar uma vez depois o botão é desativado
+        btnSorteioJogadorDois.setEnabled(false);
+        // quando os dois botões estiverem desativados o botão "Começar" é ativado
+        if(!btnSorteioJogadorUm.isEnabled() && !btnSorteioJogadorDois.isEnabled())
+            btnComecar.setEnabled(true);
+    }//GEN-LAST:event_btnSorteioJogadorDoisActionPerformed
+    private void btnComecarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComecarActionPerformed
+        // Profissão e cor Jogador 1:
+        switch (lblProfissaoJUm.getText()){
+            case "Desempregado":
+                jUm = new Desempregado(lblCorJUm.getText());
+                break;
+            case "Cientista":
+                jUm = new Cientista(lblCorJUm.getText());
+                break;
+            case "Empresario":
+                jUm = new Empresario(lblCorJUm.getText());  
+                break;                            
+        }
+        // Profissão e cor Jogador 2:
+        switch (lblProfissaoJDois.getText()){
+            case "Desempregado":
+                jDois = new Desempregado(lblCorJDois.getText());
+                break;
+            case "Cientista":
+                jDois = new Cientista(lblCorJDois.getText());
+                break;
+            case "Empresario":
+                jDois = new Empresario(lblCorJDois.getText());               
+                break;                            
+        } 
+        // instanciando a nova classe da janela de onde vai ser realmente o jogo
+        TelaPrincipal telaPrincipal;
+        telaPrincipal = new TelaPrincipal(jUm, jDois); 
+        dispose();
+        telaPrincipal.setVisible(true);
+    }//GEN-LAST:event_btnComecarActionPerformed
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+java.util.logging.Logger.getLogger(SorteioProfissaoDoisJogadores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(SorteioProfissaoDoisJogadores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+java.util.logging.Logger.getLogger(SorteioProfissaoDoisJogadores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+java.util.logging.Logger.getLogger(SorteioProfissaoDoisJogadores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+        /* Create and display the dialog */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                SorteioProfissaoDoisJogadores dialog = new SorteioProfissaoDoisJogadores(new javax.swing.JFrame(), true);
+                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                dialog.setVisible(true);
+            }
+        });
+    }
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel boxJDois;
+    private javax.swing.JPanel boxJUm;
+    private javax.swing.JButton btnComecar;
+    private javax.swing.JButton btnSorteioJogadorDois;
+    private javax.swing.JButton btnSorteioJogadorUm;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblCorJDois;
+    private javax.swing.JLabel lblCorJUm;
+    private javax.swing.JLabel lblProfissaoJDois;
+    private javax.swing.JLabel lblProfissaoJUm;
+    // End of variables declaration//GEN-END:variables
+}
+
+package visual;
+
+// Classe gerada pelo framework (serve pra mostrar a resposta do resultado escolhido)
+public class Resultado extends javax.swing.JDialog {
+    private static String mensagem;
+    
+    public Resultado(java.awt.Frame parent, boolean modal, String mensagem) {
+        super(parent, modal);
+        initComponents();
+        setLocationRelativeTo(null);
+        this.mensagem = mensagem;
+        txtareaMensagem.setText(mensagem);
+        
+    }
+    
+    
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jPanel2 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtareaMensagem = new javax.swing.JTextArea();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(394, 153));
+        setResizable(false);
+
+        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+
+        jButton1.setText("Ok");
+        jButton1.setAlignmentX(136.0F);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        txtareaMensagem.setEditable(false);
+        txtareaMensagem.setBackground(new java.awt.Color(204, 204, 204));
+        txtareaMensagem.setColumns(20);
+        txtareaMensagem.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        txtareaMensagem.setLineWrap(true);
+        txtareaMensagem.setRows(3);
+        txtareaMensagem.setWrapStyleWord(true);
+        jScrollPane2.setViewportView(txtareaMensagem);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(155, 155, 155)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        dispose();       
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    public static void main(String args[]) {
+
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Resultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                Resultado dialog = new Resultado(new javax.swing.JFrame(), true, mensagem);
+                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                dialog.setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea txtareaMensagem;
+    // End of variables declaration//GEN-END:variables
+}
+
+package visual;
+
+import classes.*;
+
+public class TelaPrincipal extends javax.swing.JFrame {
+
+    private Dado eventoDado;
+    private Dado dado = new Dado();
+    private static Jogador jUm;
+    private static Jogador jDois;
+    private boolean escolhaUm, escolhaDois, escolhaTres, extincao = false;
+
+    public TelaPrincipal(Jogador jUm, Jogador jDois) {
+        initComponents();
+        setLocationRelativeTo(null);
+        txtareaEnunciado.setLineWrap(true);
+        txtareaEnunciado.setWrapStyleWord(true);
+        switch (jUm.getProfissao()) {
+            case "Cientista":
+                jUm = new Cientista(jUm.getCor());
+                break;
+            case "Desempregado":
+                jUm = new Desempregado(jUm.getCor());
+                break;
+            case "Empresário":
+                jUm = new Empresario(jUm.getCor());
+                break;
+        }
+        switch (jDois.getProfissao()) {
+            case "Cientista":
+                jDois = new Cientista(jDois.getCor());
+                break;
+            case "Desempregado":
+                jDois = new Desempregado(jDois.getCor());
+                break;
+            case "Empresário":
+                jDois = new Empresario(jDois.getCor());
+                break;
+        }
+
+        TelaPrincipal.jUm = jUm;
+        TelaPrincipal.jDois = jDois;
+        lblCorJUm.setText(jUm.getCor());
+        lblCorJDois.setText(jDois.getCor());
+        lblProfissaoJUm.setText(jUm.getProfissao());
+        lblProfissaoJDois.setText(jDois.getProfissao());
+        lblQntdEmpresasJUm.setText(Integer.toString(jUm.getQntdEmpresa()));
+        lblQntdEmpresasJDois.setText(Integer.toString(jDois.getQntdEmpresa()));
+        lblVez.setText(jUm.getCor());
+        escolhaUm = false;
+        escolhaDois = false;
+        escolhaTres = false;
+
+    }
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jPanel7 = new javax.swing.JPanel();
+        painelOpcoes = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        lblValorDado = new javax.swing.JLabel();
+        btnEscolhaUm = new javax.swing.JButton();
+        btnEscolhaDois = new javax.swing.JButton();
+        btnEscolhaTres = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        painelJogadorUm = new javax.swing.JPanel();
+        lblCorJUm = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        lblProfissaoJUm = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        lblQntdEmpresasJUm = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        lblPAJUm = new javax.swing.JLabel();
+        lblDinheiroJUm = new javax.swing.JLabel();
+        lblPosicaoJUm = new javax.swing.JLabel();
+        btnRolarJUm = new javax.swing.JButton();
+        painelJogadorDois = new javax.swing.JPanel();
+        lblCorJDois = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        lblProfissaoJDois = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        lblQntdEmpresasJDois = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        lblPAJDois = new javax.swing.JLabel();
+        lblDinheiroJDois = new javax.swing.JLabel();
+        lblPosicaoJDois = new javax.swing.JLabel();
+        btnRolarJDois = new javax.swing.JButton();
+        painelInformacoes = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        lblTurno = new javax.swing.JLabel();
+        barraMedidorDeExtincao = new javax.swing.JProgressBar();
+        jLabel11 = new javax.swing.JLabel();
+        lblVez = new javax.swing.JLabel();
+        painelQuestoes = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtareaEnunciado = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        txtareaResultadoUm = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        txtareaResultadoDois = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        txtareaResultadoTres = new javax.swing.JTextArea();
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
+        setMaximumSize(new java.awt.Dimension(751, 628));
+        setResizable(false);
+
+        painelOpcoes.setBackground(new java.awt.Color(0, 0, 0));
+        painelOpcoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jPanel6.setBackground(new java.awt.Color(0, 0, 0));
+
+        lblValorDado.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblValorDado.setForeground(new java.awt.Color(255, 255, 255));
+        lblValorDado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblValorDado.setText("6");
+
+        btnEscolhaUm.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        btnEscolhaUm.setText("1");
+        btnEscolhaUm.setEnabled(false);
+        btnEscolhaUm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEscolhaUmActionPerformed(evt);
+            }
+        });
+
+        btnEscolhaDois.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        btnEscolhaDois.setText("2");
+        btnEscolhaDois.setEnabled(false);
+        btnEscolhaDois.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEscolhaDoisActionPerformed(evt);
+            }
+        });
+
+        btnEscolhaTres.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        btnEscolhaTres.setText("3");
+        btnEscolhaTres.setEnabled(false);
+        btnEscolhaTres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEscolhaTresActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Opção");
+
+        jLabel15.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Opção");
+
+        jLabel16.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Opção");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnEscolhaUm))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnEscolhaTres))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnEscolhaDois)))
+                .addContainerGap())
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(lblValorDado, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(lblValorDado)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEscolhaUm)
+                    .addComponent(jLabel14))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEscolhaDois)
+                    .addComponent(jLabel15))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEscolhaTres)
+                    .addComponent(jLabel16))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout painelOpcoesLayout = new javax.swing.GroupLayout(painelOpcoes);
+        painelOpcoes.setLayout(painelOpcoesLayout);
+        painelOpcoesLayout.setHorizontalGroup(
+            painelOpcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelOpcoesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        painelOpcoesLayout.setVerticalGroup(
+            painelOpcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelOpcoesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        painelJogadorUm.setBackground(new java.awt.Color(0, 0, 0));
+        painelJogadorUm.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        lblCorJUm.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        lblCorJUm.setForeground(new java.awt.Color(255, 255, 255));
+        lblCorJUm.setText("Cor Um");
+
+        jLabel2.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Profissão: ");
+
+        lblProfissaoJUm.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        lblProfissaoJUm.setForeground(new java.awt.Color(255, 255, 255));
+        lblProfissaoJUm.setText("Prof JUm");
+
+        jLabel1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Empresas: ");
+
+        lblQntdEmpresasJUm.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        lblQntdEmpresasJUm.setForeground(new java.awt.Color(255, 255, 255));
+        lblQntdEmpresasJUm.setText("Qntd Empresas JUm");
+
+        jLabel12.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Posição:");
+
+        jLabel4.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Dinheiro:");
+
+        jLabel3.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("P.A");
+
+        lblPAJUm.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        lblPAJUm.setForeground(new java.awt.Color(102, 255, 0));
+        lblPAJUm.setText("0");
+
+        lblDinheiroJUm.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        lblDinheiroJUm.setForeground(new java.awt.Color(255, 255, 51));
+        lblDinheiroJUm.setText("20");
+
+        lblPosicaoJUm.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        lblPosicaoJUm.setForeground(new java.awt.Color(255, 255, 255));
+        lblPosicaoJUm.setText("1");
+
+        btnRolarJUm.setText("Rolar");
+        btnRolarJUm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRolarJUmActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout painelJogadorUmLayout = new javax.swing.GroupLayout(painelJogadorUm);
+        painelJogadorUm.setLayout(painelJogadorUmLayout);
+        painelJogadorUmLayout.setHorizontalGroup(
+            painelJogadorUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelJogadorUmLayout.createSequentialGroup()
+                .addGroup(painelJogadorUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelJogadorUmLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel2))
+                    .addGroup(painelJogadorUmLayout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(lblCorJUm))
+                    .addGroup(painelJogadorUmLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(painelJogadorUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel12))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(painelJogadorUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblPosicaoJUm)
+                            .addComponent(lblQntdEmpresasJUm, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelJogadorUmLayout.createSequentialGroup()
+                                .addComponent(btnRolarJUm)
+                                .addGap(89, 89, 89))
+                            .addComponent(lblProfissaoJUm, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(painelJogadorUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(lblPAJUm, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblDinheiroJUm, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_S/IZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        painelJogadorUmLayout.setVerticalGroup(
+            painelJogadorUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelJogadorUmLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblCorJUm)  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+.addGroup(painelJogadorUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(lblProfissaoJUm))
+                .addGap(4, 4, 4)
+.addGroup(painelJogadorUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(lblQntdEmpresasJUm)         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED .addGroup(painelJogadorUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(lblPosicaoJUm))        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)      .addGroup(painelJogadorUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(lblDinheiroJUm))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+.addGroup(painelJogadorUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(lblPAJUm))      .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnRolarJUm)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        painelJogadorDois.setBackground(new java.awt.Color(0, 0, 0));
+painelJogadorDois.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lblCorJDois.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        lblCorJDois.setForeground(new java.awt.Color(255, 255, 255));
+        lblCorJDois.setText("Cor JDois");
+        jLabel5.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Profissão: ");
+        lblProfissaoJDois.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        lblProfissaoJDois.setForeground(new java.awt.Color(255, 255, 255));
+        lblProfissaoJDois.setText("Prof JDois");
+        jLabel6.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Empresas: ");
+        lblQntdEmpresasJDois.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        lblQntdEmpresasJDois.setForeground(new java.awt.Color(255, 255, 255));
+        lblQntdEmpresasJDois.setText("Qntd Empresas JDois");
+        jLabel13.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Posição:");
+        jLabel7.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Dinheiro:");
+        jLabel8.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("P.A");
+        lblPAJDois.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        lblPAJDois.setForeground(new java.awt.Color(102, 255, 0));
+        lblPAJDois.setText("0");
+        lblDinheiroJDois.setFont(new ava.awt.Font("Verdana", 0, 12)); // NOI18N
+        lblDinheiroJDois.setForeground(new java.awt.Color(255, 255, 51));
+        lblDinheiroJDois.setText("20");
+        lblPosicaoJDois.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        lblPosicaoJDois.setForeground(new java.awt.Color(255, 255, 255));
+        lblPosicaoJDois.setText("1");
+        btnRolarJDois.setText("Rolar");
+        btnRolarJDois.setEnabled(false);
+        btnRolarJDois.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRolarJDoisActionPerformed(evt);
+            }
+        });
+        javax.swing.GroupLayout painelJogadorDoisLayout = new javax.swing.GroupLayout(painelJogadorDois);
+        painelJogadorDois.setLayout(painelJogadorDoisLayout);
+        painelJogadorDoisLayout.setHorizontalGroup( painelJogadorDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelJogadorDoisLayout.createSequentialGroup()                .addGroup(painelJogadorDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+.addGroup(painelJogadorDoisLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel5))                   .addGroup(painelJogadorDoisLayout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(lblCorJDois))
+ .addGroup(painelJogadorDoisLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)                .addGroup(painelJogadorDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel13))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)                        .addGroup(painelJogadorDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblPosicaoJDois)
+                            .addComponent(lblQntdEmpresasJDois, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnRolarJDois)
+                            .addComponent(lblProfissaoJDois, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(painelJogadorDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(lblPAJDois, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblDinheiroJDois, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+        painelJogadorDoisLayout.setVerticalGroup(
+painelJogadorDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelJogadorDoisLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblCorJDois)  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+.addGroup(painelJogadorDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(lblProfissaoJDois))
+                .addGap(4, 4, 4)
+.addGroup(painelJogadorDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(lblQntdEmpresasJDois))      .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+.addGroup(painelJogadorDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(lblPosicaoJDois))                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+.addGroup(painelJogadorDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(lblDinheiroJDois))      .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+.addGroup(painelJogadorDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(lblPAJDois))       .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+               .addComponent(btnRolarJDois)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        painelInformacoes.setBackground(new java.awt.Color(0, 0, 0));
+painelInformacoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLabel10.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Turno: ");
+        lblTurno.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        lblTurno.setForeground(new java.awt.Color(255, 255, 255));
+        lblTurno.setText("1");
+        barraMedidorDeExtincao.setBackground(new java.awt.Color(102, 255, 0));
+        barraMedidorDeExtincao.setForeground(new java.awt.Color(51, 255, 0));
+        barraMedidorDeExtincao.setMaximum(2);
+        barraMedidorDeExtincao.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        barraMedidorDeExtincao.setName(""); // NOI18N
+        barraMedidorDeExtincao.setString("Medidor de extinção");
+        jLabel11.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Medidor de extinção: ");
+        lblVez.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        lblVez.setForeground(new java.awt.Color(255, 255, 255));
+ lblVez.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblVez.setText("Vez");
+        javax.swing.GroupLayout painelInformacoesLayout = new javax.swing.GroupLayout(painelInformacoes);
+        painelInformacoes.setLayout(painelInformacoesLayout);
+        painelInformacoesLayout.setHorizontalGroup( painelInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelInformacoesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel10 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblTurno, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(lblVez, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55)
+                .addComponent(jLabel11)
+                .addGap(14, 14, 14)
+                .addComponent(barraMedidorDeExtincao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        painelInformacoesLayout.setVerticalGroup(
+            painelInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelInformacoesLayout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE)      .addGroup(painelInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(barraMedidorDeExtincao, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(painelInformacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel10)
+                        .addComponent(lblTurno)
+                        .addComponent(jLabel11)
+                        .addComponent(lblVez)))
+                .addGap(11, 11, 11))
+        );
+        painelQuestoes.setBackground(new java.awt.Color(0, 0, 0));
+        painelQuestoes.setMaximumSize(new java.awt.Dimension(751, 379));
+        txtareaEnunciado.setEditable(false);
+        txtareaEnunciado.setBackground(new java.awt.Color(0, 0, 0));
+        txtareaEnunciado.setColumns(20);
+        txtareaEnunciado.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
+        txtareaEnunciado.setForeground(new java.awt.Color(255, 255, 255));
+        txtareaEnunciado.setLineWrap(true);
+        txtareaEnunciado.setRows(5);
+        txtareaEnunciado.setText("Enunciado");
+        txtareaEnunciado.setWrapStyleWord(true);
+        jScrollPane2.setViewportView(txtareaEnunciado);
+        txtareaResultadoUm.setEditable(false);
+        txtareaResultadoUm.setBackground(new java.awt.Color(0, 0, 0));
+        txtareaResultadoUm.setColumns(20);
+        txtareaResultadoUm.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        txtareaResultadoUm.setForeground(new java.awt.Color(255, 255, 255));
+        txtareaResultadoUm.setLineWrap(true);
+        txtareaResultadoUm.setRows(2);
+        txtareaResultadoUm.setText("Resultado 1");
+        txtareaResultadoUm.setWrapStyleWord(true);
+        jScrollPane3.setViewportView(txtareaResultadoUm);
+        txtareaResultadoDois.setEditable(false);
+        txtareaResultadoDois.setBackground(new java.awt.Color(0, 0, 0));
+        txtareaResultadoDois.setColumns(20);
+        txtareaResultadoDois.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        txtareaResultadoDois.setForeground(new java.awt.Color(255, 255, 255));
+        txtareaResultadoDois.setLineWrap(true);
+        txtareaResultadoDois.setRows(2);
+        txtareaResultadoDois.setText("Resultado 2");
+        txtareaResultadoDois.setWrapStyleWord(true);
+        jScrollPane4.setViewportView(txtareaResultadoDois);
+        txtareaResultadoTres.setEditable(false);
+        txtareaResultadoTres.setBackground(new java.awt.Color(0, 0, 0));
+        txtareaResultadoTres.setColumns(20);
+        txtareaResultadoTres.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        txtareaResultadoTres.setForeground(new java.awt.Color(255, 255, 255));
+        txtareaResultadoTres.setLineWrap(true);
+        txtareaResultadoTres.setRows(2);
+        txtareaResultadoTres.setText("Resultado 3\n");
+        txtareaResultadoTres.setWrapStyleWord(true);
+        jScrollPane5.setViewportView(txtareaResultadoTres);
+        javax.swing.GroupLayout painelQuestoesLayout = new javax.swing.GroupLayout(painelQuestoes);
+        painelQuestoes.setLayout(painelQuestoesLayout);
+        painelQuestoesLayout.setHorizontalGroup(
+painelQuestoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelQuestoesLayout.createSequentialGroup()
+                .addContainerGap()    .addGroup(painelQuestoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 731, Short.MAX_VALUE)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 731, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 731, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+painelQuestoesLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jScrollPane3, jScrollPane4, jScrollPane5});
+        painelQuestoesLayout.setVerticalGroup(
+painelQuestoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelQuestoesLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+painelQuestoesLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jScrollPane3, jScrollPane4, jScrollPane5});
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addComponent(painelJogadorUm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(painelOpcoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(painelJogadorDois, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(painelInformacoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(painelQuestoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jPanel7Layout.setVerticalGroup(
+jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+.addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(painelJogadorUm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(painelJogadorDois, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(painelOpcoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(painelInformacoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)      .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(painelQuestoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel7Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {painelJogadorDois, painelJogadorUm});
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(  layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+    public void finalizarJogo() {
+        double jUmScore, jDoisScore;
+        lblDinheiroJUm.setText(Integer.toString(jUm.getDinheiro()));
+        lblPAJUm.setText(Integer.toString(jUm.getPontosAmbientais()));
+        lblPosicaoJUm.setText(Integer.toString(jUm.getPosicao()));
+        lblPosicaoJDois.setText(Integer.toString(jDois.getPosicao()))
+        jUmScore = ((jUm.getPontosAmbientais() * 2) + (jUm.getDinheiro()));
+        jDoisScore = (((jDois.getPontosAmbientais() * 2) + jDois.getDinheiro()));
+        if (Integer.parseInt(lblPosicaoJUm.getText()) > Integer.parseInt(lblPosicaoJDois.getText())) {
+            jUmScore += Integer.parseInt(lblPosicaoJUm.getText());
+        } else if (jUm.getPosicao() < jDois.getPosicao()) {
+            jDoisScore += Integer.parseInt(lblPosicaoJDois.getText());
+        }
+        if (jUmScore > jDoisScore) {
+            txtareaEnunciado.setText("Jogador um venceu com: " + jUmScore + " pontos, parabéns!\n Jogador 2 pontos: " + jDoisScore);
+        } else {
+            txtareaEnunciado.setText("Jogador dois venceu com: " + jDoisScore + " pontos, parabéns!\n Jogador 1 pontos: " + jUmScore);
+        }
+        btnEscolhaUm.setEnabled(false);
+        btnEscolhaDois.setEnabled(false);
+        btnEscolhaTres.setEnabled(false);
+        btnRolarJUm.setEnabled(false);
+        btnRolarJDois.setEnabled(false);
+    }
+    public void badEnd() {
+        btnRolarJDois.setEnabled(false);
+        btnRolarJUm.setEnabled(false);
+        txtareaEnunciado.setText("Por conta dos acontecimentos atuais, o mundo está em decadência e para a raça humana não ser extinta o que vocês vão fazer?");
+        txtareaResultadoUm.setText("Mesmo sendo tarde, ajudar um ao outro em coleta de lixo e reciclagem");
+        txtareaResultadoDois.setText("Doar os dinheiros somados para ONU e ver o que pode acontecer...");
+        txtareaResultadoUm.setText("Todos irão morrer um dia.");
+        btnEscolhaUm.setEnabled(true);
+        btnEscolhaDois.setEnabled(true);
+        btnEscolhaTres.setEnabled(true);}
+    private void btnRolarJUmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRolarJUmActionPerformed
+        dado.rolar();
+        jUm.avancar(dado.getValorAtual());
+        lblPosicaoJUm.setText(Integer.toString(jUm.getPosicao()));
+        lblValorDado.setText(Integer.toString(dado.getValorAtual()));
+        btnRolarJUm.setEnabled(false);
+        btnEscolhaUm.setEnabled(true);
+        btnEscolhaDois.setEnabled(true);
+        btnEscolhaTres.setEnabled(true);
+        // Escolhendo evento  
+        do {
+            eventoDado = new Dado(ev0000.getEventoContagemSize());
+            eventoDado.rolar();
+            if (ev0000.getEvento(eventoDado.getValorAtual() - 1).getProfissao() == "Nenhuma"){
+                break;
+            }
+        } while (jUm.getProfissao() != ev0000.getEvento(eventoDado.getValorAtual() - 1).getProfissao());
+        // Se a profissao de evento for diferente da profissão do jogador irá repetir a rolagem até cair num evento de mesma profissão
+        // Se a profissão for "Nenhuma" continue...
+txtareaEnunciado.setText(ev0000.getEvento(eventoDado.getValorAtual() - 1).getEnunciado());
+txtareaResultadoUm.setText(ev0000.getEvento(eventoDado.getValorAtual() - 1).getResultadoA());
+txtareaResultadoDois.setText(ev0000.getEvento(eventoDado.getValorAtual() - 1).getResultadoB());
+txtareaResultadoTres.setText(ev0000.getEvento(eventoDado.getValorAtual() - 1).getResultadoC());
+    }//GEN-LAST:event_btnRolarJUmActionPerformed
+    private void btnRolarJDoisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRolarJDoisActionPerformed
+        dado.rolar();
+        jDois.avancar(dado.getValorAtual());
+        lblPosicaoJDois.setText(Integer.toString(jDois.getPosicao()));
+        lblValorDado.setText(Integer.toString(dado.getValorAtual()));
+        btnRolarJDois.setEnabled(false);
+        btnEscolhaUm.setEnabled(true);
+        btnEscolhaDois.setEnabled(true);
+        btnEscolhaTres.setEnabled(true);
+        // Escolhendo evento  
+        do {
+            eventoDado = new Dado(ev0000.getEventoContagemSize());
+            eventoDado.rolar();
+            if (ev0000.getEvento(eventoDado.getValorAtual() - 1).getProfissao() == "Nenhuma"){
+                break;
+            }
+        } while (jDois.getProfissao() != ev0000.getEvento(eventoDado.getValorAtual() - 1).getProfissao());
+        // Se a profissao de evento for diferente da profisso do jogador irá repetir a rolagem até cair num evento de mesma profissão
+        // Se a profissão for "Nenhuma" continue...
+txtareaEnunciado.setText(ev0000.getEvento(eventoDado.getValorAtual() - 1).getEnunciado());
+txtareaResultadoUm.setText(ev0000.getEvento(eventoDado.getValorAtual() - 1).getResultadoA());
+txtareaResultadoDois.setText(ev0000.getEvento(eventoDado.getValorAtual() - 1).getResultadoB());
+txtareaResultadoTres.setText(ev0000.getEvento(eventoDado.getValorAtual() - 1).getResultadoC());
+    }//GEN-LAST:event_btnRolarJDoisActionPerformed
+    private void btnEscolhaUmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscolhaUmActionPerformed
+        if (barraMedidorDeExtincao.getValue() == 2) {
+            extincao = true;
+        }        
+       if (extincao != true) {
+            ev0000.getEvento(eventoDado.getValorAtual() - 1).setRespostaJogador(txtareaResultadoUm.getText());
+            Resultado dialog = new Resultado(new javax.swing.JFrame(), true, ev0000.getEvento(eventoDado.getValorAtual() - 1).getMensagemResultadoA());
+            dialog.setVisible(true);
+            //se turno impar = jogador 1
+            if ((Integer.parseInt(lblTurno.getText())) % 2 != 0) {
+ jUm.ganharPontos(ev0000.getEvento(eventoDado.getValorAtual() - 1).getValorAmbientalA());
+                jUm.receber(ev0000.getEvento(eventoDado.getValorAtual() - 1).getValorDinheiroA());
+                if (jUm.getDinheiro() < 0) {
+                    jUm.setEndividado(true);
+                } else {
+                    jUm.setEndividado(false);
+                }
+                jUm.finalizar();
+                lblDinheiroJUm.setText(Integer.toString(jUm.getDinheiro()));               lblPAJUm.setText(Integer.toString(jUm.getPontosAmbientais()));
+                lblPosicaoJUm.setText(Integer.toString(jUm.getPosicao()));
+                lblVez.setText(jDois.getCor());
+                btnRolarJDois.setEnabled(true);
+            } // se turno par = jogador 2
+            else {
+ jDois.ganharPontos(ev0000.getEvento(eventoDado.getValorAtual() - 1).getValorAmbientalA());
+                jDois.receber(ev0000.getEvento(eventoDado.getValorAtual() - 1).getValorDinheiroA());
+                if (jDois.getDinheiro() < 0) {
+                    jDois.setEndividado(true);
+                } else {
+                    jDois.setEndividado(false);
+                }
+                jDois.finalizar();                lblDinheiroJDois.setText(Integer.toString(jDois.getDinheiro()));
+lblPAJDois.setText(Integer.toString(jDois.getPontosAmbientais()));
+                lblPosicaoJUm.setText(Integer.toString(jDois.getPosicao()));
+                lblVez.setText(jUm.getCor());
+                btnRolarJUm.setEnabled(true);
+            }
+lblTurno.setText(Integer.toString(Integer.parseInt(lblTurno.getText()) + 1));
+            btnEscolhaUm.setEnabled(false);
+            btnEscolhaDois.setEnabled(false);
+            btnEscolhaTres.setEnabled(false);
+            if (Integer.parseInt(lblTurno.getText()) > 6) {
+                finalizarJogo();
+            }
+        }
+        if (ev0000.getEvento(eventoDado.getValorAtual() - 1).getGrave() == ev0000.getEvento(eventoDado.getValorAtual() - 1).getMensagemResultadoA())    barraMedidorDeExtincao.setValue(barraMedidorDeExtincao.getValue() + 1);
+        }
+        if (barraMedidorDeExtincao.getValue() == 2) {
+            badEnd();
+        }
+        if (barraMedidorDeExtincao.getValue() == 2 && extincao) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_btnEscolhaUmActionPerformed
+    private void btnEscolhaDoisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscolhaDoisActionPerformed
+        if (barraMedidorDeExtincao.getValue() == 2) {
+            extincao = true;
+        }
+        if (extincao != true) {
+            ev0000.getEvento(eventoDado.getValorAtual() - 1).setRespostaJogador(txtareaResultadoDois.getText());
+            Resultado dialog = new Resultado(new javax.swing.JFrame(), true, ev0000.getEvento(eventoDado.getValorAtual() - 1).getMensagemResultadoB());
+            dialog.setVisible(true);
+            //se turno impar = jogador 1
+            if ((Integer.parseInt(lblTurno.getText())) % 2 != 0) {
+ jUm.ganharPontos(ev0000.getEvento(eventoDado.getValorAtual() - 1).getValorAmbientalB());
+                jUm.receber(ev0000.getEvento(eventoDado.getValorAtual() - 1).getValorDinheiroB())
+                if (jUm.getDinheiro() < 0) {
+                    jUm.setEndividado(true);
+                } else {
+                    jUm.setEndividado(false);
+                }
+                jUm.finalizar();
+                lblDinheiroJUm.setText(Integer.toString(jUm.getDinheiro()));               lblPAJUm.setText(Integer.toString(jUm.getPontosAmbientais()));
+                lblPosicaoJUm.setText(Integer.toString(jUm.getPosicao()));
+                lblVez.setText(jDois.getCor());
+                btnRolarJDois.setEnabled(true);
+            } // se turno par = jogador 2
+            else {
+ jDois.ganharPontos(ev0000.getEvento(eventoDado.getValorAtual() - 1).getValorAmbientalB());
+                jDois.receber(ev0000.getEvento(eventoDado.getValorAtual() - 1).getValorDinheiroB());
+                if (jDois.getDinheiro() < 0) {
+                    jDois.setEndividado(true);
+                } else {
+                    jDois.setEndividado(false);
+                }
+                jDois.finalizar();
+lblDinheiroJDois.setText(Integer.toString(jDois.getDinheiro())); lblPAJDois.setText(Integer.toString(jDois.getPontosAmbientais()));
+                lblPosicaoJUm.setText(Integer.toString(jDois.getPosicao()));
+                lblVez.setText(jUm.getCor());
+                btnRolarJUm.setEnabled(true);
+            }
+lblTurno.setText(Integer.toString(Integer.parseInt(lblTurno.getText()) + 1));
+            btnEscolhaUm.setEnabled(false);
+            btnEscolhaDois.setEnabled(false);
+            btnEscolhaTres.setEnabled(false);
+            if (Integer.parseInt(lblTurno.getText()) > 6) {
+                finalizarJogo();
+            }
+        }
+        if (ev0000.getEvento(eventoDado.getValorAtual() - 1).getGrave() == ev0000.getEvento(eventoDado.getValorAtual() - 1).getMensagemResultadoB()) {
+barraMedidorDeExtincao.setValue(barraMedidorDeExtincao.getValue() + 1);
+        }
+        if (barraMedidorDeExtincao.getValue() == 2) {
+            badEnd();
+        }
+        if (barraMedidorDeExtincao.getValue() == 2 && extincao) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_btnEscolhaDoisActionPerformed
+    private void btnEscolhaTresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscolhaTresActionPerformed
+        if (barraMedidorDeExtincao.getValue() == 2) {
+            extincao = true;
+        }
+        if (extincao != true) {
+            ev0000.getEvento(eventoDado.getValorAtual() - 1).setRespostaJogador(txtareaResultadoTres.getText());
+            Resultado dialog = new Resultado(new javax.swing.JFrame(), true, ev0000.getEvento(eventoDado.getValorAtual() - 1).getMensagemResultadoC());
+            dialog.setVisible(true);
+            //se turno impar = jogador 1
+            if ((Integer.parseInt(lblTurno.getText())) % 2 != 0) {
+jUm.ganharPontos(ev0000.getEvento(eventoDado.getValorAtual() - 1).getValorAmbientalC());
+                jUm.receber(ev0000.getEvento(eventoDado.getValorAtual() - 1).getValorDinheiroC());
+                if (jUm.getDinheiro() < 0) {
+                    jUm.setEndividado(true);
+                } else {
+                    jUm.setEndividado(false);
+                }
+                jUm.finalizar();
+                lblDinheiroJUm.setText(Integer.toString(jUm.getDinheiro()));               lblPAJUm.setText(Integer.toString(jUm.getPontosAmbientais()));
+                lblPosicaoJUm.setText(Integer.toString(jUm.getPosicao()));
+                lblVez.setText(jDois.getCor());
+                btnRolarJDois.setEnabled(true);
+            } // se turno par = jogador 2
+            else {
+ jDois.ganharPontos(ev0000.getEvento(eventoDado.getValorAtual() - 1).getValorAmbientalC());
+                jDois.receber(ev0000.getEvento(eventoDado.getValorAtual() - 1).getValorDinheiroC());
+                if (jDois.getDinheiro() < 0) {
+                    jDois.setEndividado(true);
+                } else {
+                    jDois.setEndividado(false);
+                }
+                jDois.finalizar();    lblDinheiroJDois.setText(Integer.toString(jDois.getDinheiro()));
+lblPAJDois.setText(Integer.toString(jDois.getPontosAmbientais()));
+                lblPosicaoJUm.setText(Integer.toString(jDois.getPosicao()));
+                lblVez.setText(jUm.getCor());
+                btnRolarJUm.setEnabled(true);
+           }
+     lblTurno.setText(Integer.toString(Integer.parseInt(lblTurno.getText()) + 1));
+            btnEscolhaUm.setEnabled(false);
+            btnEscolhaDois.setEnabled(false);
+            btnEscolhaTres.setEnabled(false);
+            if (Integer.parseInt(lblTurno.getText()) > 6) {
+                finalizarJogo();
+            }
+        }
+        if (ev0000.getEvento(eventoDado.getValorAtual() - 1).getGrave() == ev0000.getEvento(eventoDado.getValorAtual() - 1).getMensagemResultadoC()) {
+            barraMedidorDeExtincao.setValue(barraMedidorDeExtincao.getValue() + 1);
+        }
+        if (barraMedidorDeExtincao.getValue() == 2) {
+            badEnd();
+        }
+        if (barraMedidorDeExtincao.getValue() == 2 && extincao) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_btnEscolhaTresActionPerformed
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TelaPrincipal(jUm, jDois).setVisible(true);
+            }
+        });
+    }
+
+    // Variáveis eventos possíveis:
+    // Cientista:
+    private Evento ev0000 = new Evento("Cientista",
+            "Canudos demoram 500 anos para se decompor na natureza, e é prejudicial ao meio ambiente, a universidade precisa da sua influência como pesquisador para ajuda-los a melhorar o uso descontrolado do mesmo:",
+            "Reinvidicar ações do governo para a conscientização do não uso de canudos plásticos e proibir estabelecimentos de fornece-los.",
+            "Sugerir à universidade começar pequeno, e promover incentivos para seus alunos mudarem de comportamento.",
+            "Compre o MÁXIMO de canudos que puder para outras pessoas não terem como usar",
+            "Sua luta de conscientização contra o uso de canudinhos foi ouvida mas teve o efeito contrário ao meio ambiente, devivo ao alto preço de canudos sustentáveis, ao invés de fornece-los, agora comerciantes estão usando garrafas plásticas, ainda mais prejudiciais. Perca 10 pontos ambientais.",
+            "A universidade, seguindo seus conselhos, começou com um programa de concientização para seus alunos e fizeram um projeto para coletar o máximo de canudos plásticos possíveis para levar para a reciclagem ec com o dinheiro arrecadado, usar para melhorias na universidade para os alunos. Ganhe 5 dinheiros e ganhe 10 pontos ambientais.",
+            "Parabéns, você se esforçou pra comprar 50 dinheiros de canudos, perca 50 dinheiros e ganhe 1 ponto ambiental.",
+            -10, 10, 1, 0, 5, -50, "0");
+    private Evento ev0001 = new Evento("Cientista",
+            "A principal usina hidrelétrica que abastece a cidade está quase sem água, e você é um dos especialistas que deverá propor uma solução para este problema.",
+            "Fazer campanhas de conscientização e pedir para que as pessoas economizem água até que os reservatórios encham novamente.",
+            "Avisar a população da situação.",
+            "Propor um aumento no preço da energia elétrica até que os reservatórios encham novamente.",
+            "Muitos não diminuiram o consumo, e isso fez com que os reservatórios atingissem níveis críticos de água. Perca 10 pontos ambientais e perca 5 dinheiros.",
+            "A população ignorou. Perca 15 pontos ambientais",
+            "Com o preço alto, as pessoas se viram obrigadas a diminuir o consumo da energia elétrica, o que acarretou na recuperação dos níveis de água, o que proporcionaram a volta dos preços normais. Ganhe 20 pontos ambientais e 5 dinheiros",
+            -10, -15, 20, -5, 0, 5, "0");
+    private Evento ev0002 = new Evento("Cientista",
+            "A pesca ilegal está sendo praticada num lago próximo a sua universidade, você juntamente com a instituição se sente na obrigação de ajudar a combater isso, o que fará?",
+            "Com a ajuda de voluntários próximos a área, proteger o local e denunciar os meliantes.",
+            "Promover manifestações com a ajuda de alunos interessados na causa para forçar medidas do governo para regulamentar este lago.",
+            "Se fantasie de algum herói que faz justiça pelas próprias mãos e aterrorize os meliantes.",
+            "As pescas ilegais diminuiram após a prisão de alguns pescadores, outros com medo pararam com a prática. Ganhe 10 pontos ambientais ",
+            "As manifestações funcionaram! O governo prometeu medidas para impedir que a pesca ilegal continue, porém, as regulamentações não surtiram efeito e as pescas continuam. Perca 10 pontos ambientais",
+            "A vida não é um jogo de computador, você foi preso e sua família teve que pagar a fiança, perca 30 dinheiros.",
+            10, -10, 0, 0, 0, -30, "0");
+    private Evento ev0003 = new Evento("Empresário",
+            "O governo proibiu o fornecimento de canudos plásticos para fins de preservação do meio ambiente, para não desobedecer a lei, terá que escolher:",
+            "Fornecer canudos de papel ao invés dos de plástico.",
+            "Deixar de fornecer canudos.",
+            "Fornecer garrafas plásticas no lugar de canudos.",
+            "Sua substituição fará um bem para o meio ambiente, porém, cada unidade de canudo de papel custa em média 10 vezes mais caro que o de plástico e você terá que arcar com os prejuízos. Perca 10 dinheiros e ganhe 10 pontos ambientais.",
+            "Sua empresa agora está andando lado a lado com o meio ambiente, porém alguns clientes não aceitam beber seus sucos sem canudo. Perca 5 dinheiros e ganhe 15 pontos ambientais.",
+            "Você está de acordo com a lei, porém garrafas plásticas são mais prejudiciais ao meio ambiente que canudos. Perca 10 pontos ambientais",
+            10, 15, -10, -10, -5, 0, "0");
+    private Evento ev0004 = new Evento("Empresário",
+            "A principal usina hidrelétrica que abastece a cidade está quase sem água, e pede para que as pessoas e empresas economizem energia elétrica até que o nível dos reservatórios aumentem. Você, como dono de uma empresa, o que fará?",
+            "Manter a produção no mesmo ritmo.",
+            "Diminuir a produção.",
+            "Aumentar a produção.",
+            "Ao não poupar energia elétrica como muitos outros, os reservatórios estão em nível crítico e haverá mudanças nas bandeiras tarifárias e o aumento será de 42,8% até que os reservatórios se recuperem. Perca 10 dinheiros e perca 5 pontos ambientais.",
+            "Ao poupar energia, a usina conseguiu se reestabilizar e não precisou de um aumento na energia elétrica para todos, embora perdeu clientes nesse período você acabou evitando um prejuizo maior no futuro. Ganhe 10 pontos ambientais e perca 5 dinheiros. ",
+            "Você é muito mal e decidiu aumentar mais ainda a produção, por conta disso os reservatórios entraram em níveis críticos muito cedo e haverá mudanças nas bandeiras tarifárias com um aumento de 100% até que os reservatórios se recuperem. Perca 35 dinheiros e 20 pontos ambientais.",
+            -5, 10, -20, -10, -5, -35, "0");
+    private Evento ev0005 = new Evento("Empresário",
+            "Ao procurar novos fornecedores de peixe para seu restaurante, acha um grupo que vende peixes em abundância além de um certo peixe raro que, além de barato, há uma grande procura devido sua raridade. Após contratar seus serviços, descobre que os mesmos praticam pesca ilegal e abusiva e este peixe está correndo risco de extinção. Sabendo disso, o que fará?",
+            "Aproveitará a falta de concorrentes e investirá ainda mais para aumentar o lucro.",
+            "Cortar relações com o fornecedor e denunciá-los.",
+            "Finja que não sabe de nada e compre o necessário para não desconfiarem.",
+            "Devido a pesca desenfreada e preços baixos, o lucro \"decolou\"! Seus concorrentes desconfiaram e investigaram, você e seus fornecedores foram descobertos e todos presos, você porém foi salvo pela sua família que lhe pagou a fiança de 30 dinheiros. Infelizmente não deu tempo de salvar a espécie rara de peixe, que por conta sua foi extinta. Perca 30 dinheiros, perca 30 pontos ambientais e medidor de extinção cresce em 1.",
+            "Graças a sua ação, não só seus fornecedores foram presos, mas abriu as portas para maiores investigações no local e salvará muito mais peixes. Apesar de perder o fornecedor barato, o marketing \"boca-a-boca\" acabou compensando, pessoas ao saber de sua ação ao denuncia-los, criaram uma simpatia por seu restaurante e foram conhece-lo. Ganhe 5 dinheiros, ganhe 15 pontos ambientais.",
+            "Um outro empresário denuncia o fornecedor e você acaba que lucrando nada além de quase matar uma espécie de peixes raros. Perca 10 pontos ambientais.",
+            -30, 15, -10, -30, -5, 0, "1");
+    private Evento ev0006 = new Evento("Desempregado",
+            "Em mais uma ida ao restaurante que você gosta, ao pedir seu refrigerante com gelo e limão, o garçom não te deu canudo, o que você faz?",
+            "Nada, consigo beber meu refrigerante diretamente no copo.",
+            "Peço meu canudo.",
+            "Pergunto para o garçom o motivo de não ter canudo desta vez.",
+            "Muito bem, ao beber direto do copo, menos 1 canudo irá para o mar e isso pode ter evitado uma morte. Ganhe 5 pontos ambientais",
+            "Seu canudo foi parar no mar, e o mesmo acabou entalado na narina de uma tartaruga que acabou falecendo. Perca 5 pontos ambientais",
+            "\"Pois 80% de todo lixo presente no oceano é feito de plástico\", como o canundinho é muito pequeno ele passa por qualquer filtro de reciclagem sendo então inútil após o uso.' Com essa explicação você se conscientiza e para de pedir canudinhos em outros lugares. Ganhe 10 pontos ambientais.",
+            5, -5, 10, 0, 0, 0, "0");
+    private Evento ev0007 = new Evento("Desempregado",
+            "A principal usina hidrelétrica que abastece a cidade está quase sem água, e pede para que as pessoas e empresas economizem energia elétrica até que o nível dos reservatórios aumentem. O que fará em casa?",
+            "Manter tudo normalmente, os outros economizam por mim.",
+            "Economizar.",
+            "Ir com seus pais ficar por um tempo com sua família em outro estado por um mês",
+            "Muitos pensaram igual a você, e como resultado os reservatórios estão em nível crítico e haverá mudanças nas bandeiras tarifárias, o aumento será de 42,8% até que os reservatórios se recuperem. Perca 10 dinheiros e perca 5 pontos ambientais.",
+            "Ao poupar energia, a usina conseguiu se reestabilizar e não precisou de um aumento na energia elétrica para todos, e você acabou evitando um prejuizo maior no futuro. Ganhe 10 pontos ambientais.",
+            "Embora você economizou indiretamente isso contribuiu para que o reservatório enchesse rapidamente, mas sua viagem lhe custou algo. Ganhe 15 pontos ambientas e perca 5 dinheiros",
+            -5, 10, 15, -10, 0, -5, "0");
+    private Evento ev0008 = new Evento("Desempregado",
+            "Uma oportunidade de emprego num navio petroleiro surge e você aceita sem hesitar. Em sua primeira viagem já percebe diversas irregularidades e devido a isso decide procurar outro emprego. No entanto, você não para de se perguntar: Devo denunciar?",
+            "Não.",
+            "Sim.",
+            "Pedir suborno para não denunciar.",
+            "Um desastre ocorreu. Devido a falta de manutenção no navio, o mesmo acaba explodindo e em meio as chamas afundou ao lago de Xangai. Onze dias após o ocorrido as manchas de óleo já cobrem a área de 101km (equivalente ao tamanho de Paris) e preocupa ambientalistas que consideram a área como uma das mais ricas em biodiversidade do mundo. Perca 10 pontos ambientais e medidor de extinção cresce em 1.",
+            "Sua denuncia foi ouvida e graças a ela foi possível identificar uma série de irregularidades no navio e os responsáveis pela regulamentação serão devidamente punidos. Especialistas afirmam: Um grande desastre poderia ter ocorrido caso esse navio continuasse no mar, por conta disso te recompensaram com uma quantia de dinheiro. Ganhe 20 pontos ambientais e 5 dinheiros.",
+            "A policia descobriu as irregularidades e te deduraram, para não ir para cadeia pagou 95% do que tinha recebido dos subornos. Ganhe 5 dinheiros",
+            -10, 20, 0, 0, 5, 5, "1");
+    //Fim dos eventos exclusivos
+    //Eventos aleatórios
+    private Evento ev0009 = new Evento("Nenhuma",
+            "Você está no banho e deu vontade de fazer xixi, o que fazer?",
+            "Saio do banho e vou para a privada",
+            "Faço no chuveiro",
+            "Vai ser rápido, deixo o chuveiro ligado enquanto vou para privada ",
+            "Pode não parecer, mas essa ação a longo prazo causa um impacto não só financeiro, mas para o meio ambiente. Um adulto gasta em média 49 litros com descargas e no chuveiro você pode diminuir essa quantidade de água desperdiçada. Perca 5 pontos ambientais.",
+            "Muito bem, sabia que ao fazer xixi no banheiro, evitando uma descarga desnecessária resulta, em média, na economia de 4380 litros de água potável por ano? Ganhe 5 pontos ambientais.",
+            "Além de dar descarga, a água caindo desnecessária do chuveiro fez que demorasse um pouco mais pra tomar banho assim desperdiçando água. Perca 10 pontos ambientais.",
+            -5, 5, -10, 0, 0, 0, "0");   
+    private Evento ev0010 = new Evento("Nenhuma",
+            "Você vai ao banheiro escovar os dentes. Pega escova, passa a pasta de dente, abre a torneira, molha um pouco... E depois?",
+            "Escovo os dentes e fecho a torneira.",
+            "Fecho a torneira e escovo os dentes.",
+            "Escovo os dentes e saio do banheiro.",
+            "Apenas 1% da água do planeta é própria para o consumo humano. Algo pequeno como escovar os dentes com a torneira aberta diariamente, pode acabar desperdiçando em média 16 mil litros de água por ano. Perca 5 pontos ambientais.",
+            "Opção correta, uma pequena ação como esta pode economizar até 46 litros de água por dia. Ganhe 5 pontos ambientais.",
+            "Você só lembrou uma hora depois que deixou a torneira aberta e correu para fechar, além de desperdiçar muita água sua conta veio mais cara. Perca 10 pontos ambientais e 5 dinheiros.",
+            -5, 5, -10, 0, 0, -5, "0");
+    private Evento ev0011 = new Evento("Nenhuma",
+            "Você acabou de comer um salgadinho e está na rua, não há nenhum lixo em volta, o você fará?",
+            "Jogar a embalagem no chão.",
+            "Guardar a embalagem até achar um lixo.",
+            "Re-usar a embalagem para guardar outras coisas.",
+            "Foi apenas uma embalagem, porém, mais pessoas fizeram como você, o lixo se acumulou na rua e foi parar nos bueiros causando uma grande enchente num dia chuvoso, por sorte só houve danos financeiros. Perca 5 pontos ambientais",
+            "Muito bem! Você colaborou para que os bueiros continuassem livres de lixo. Ganhe 5 pontos ambientais.",
+            "Pesquisando na internet você descobre um jeito de fazer um estojo escolar com a embalagem presenteando o seu primo. Ganhe 5 pontos ambientais.",
+            -5, 5, 5, 0, 0, 0, "0");
+    private Evento ev0012 = new Evento("Nenhuma",
+            "Numa visita a sua vó, ela resolve fazer uma janta especial para comemorar o reencontro, e enquanto está tudo no fogo descansa. Curioso, você vai ver o que ela está preparando e vê as panelas destampadas, depois da bisbilhotada você:",
+            "Tampo as panelas e volto para a sala.",
+            "Volto para a sala.",
+            "Deixo no fogo baixo",
+            "Algo simples como tampar as panelas enquanto cozinha gera uma economia de 70% do gás a ser utilizado, além de ajudar o meio ambiente você economizou o gás da sua vó. Ganhe 5 dinheiros e ganhe 5 pontos ambientais.",
+            "Cozinhar com as panelas destampadas gasta mais gás e por conseguinte, prejudica o meio ambiente e o \"bolso\". O gás acabou no meio da preparação da janta, você vai embora com fome e ainda fará a gentileza de comprar outro gás para sua vó. Perca 5 dinheiros e perca 5 pontos ambientais.",
+            "Embora você deixou as panelas destampadas, o fogo baixo segurou o consumo em troca de mais tempo pra cozinhar. Não ganhe nada.",
+            5, -5, 0, 5, -5, 0, "0");
+    //Fim dos eventos
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JProgressBar barraMedidorDeExtincao;
+    private javax.swing.JButton btnEscolhaDois;
+    private javax.swing.JButton btnEscolhaTres;
+    private javax.swing.JButton btnEscolhaUm;
+    private javax.swing.JButton btnRolarJDois;
+    private javax.swing.JButton btnRolarJUm;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel lblCorJDois;
+    private javax.swing.JLabel lblCorJUm;
+    private javax.swing.JLabel lblDinheiroJDois;
+    private javax.swing.JLabel lblDinheiroJUm;
+    private javax.swing.JLabel lblPAJDois;
+    private javax.swing.JLabel lblPAJUm;
+    private javax.swing.JLabel lblPosicaoJDois;
+    private javax.swing.JLabel lblPosicaoJUm;
+    private javax.swing.JLabel lblProfissaoJDois;
+    private javax.swing.JLabel lblProfissaoJUm;
+    private javax.swing.JLabel lblQntdEmpresasJDois;
+    private javax.swing.JLabel lblQntdEmpresasJUm;
+    private javax.swing.JLabel lblTurno;
+    private javax.swing.JLabel lblValorDado;
+    private javax.swing.JLabel lblVez;
+    private javax.swing.JPanel painelInformacoes;
+    private javax.swing.JPanel painelJogadorDois;
+    private javax.swing.JPanel painelJogadorUm;
+    private javax.swing.JPanel painelOpcoes;
+    private javax.swing.JPanel painelQuestoes;
+    private javax.swing.JTextArea txtareaEnunciado;
+    private javax.swing.JTextArea txtareaResultadoDois;
+    private javax.swing.JTextArea txtareaResultadoTres;
+    private javax.swing.JTextArea txtareaResultadoUm;
+    // End of variables declaration//GEN-END:variables
+}
+
+package classes;
+import java.util.Random;
+// Classe dado para gerar números aleatórios com um método construtor para saber o número máximo do dado
+public class Dado {
+    private Random gerador;
+    private int lados, valorAtual;
+    public Dado(int lados){
+        this.lados = lados;
+        gerador = new Random();
+    }
+    public Dado(){
+        this.lados = 6;
+        gerador = new Random();
+    }
+    public void rolar(){
+        valorAtual = gerador.nextInt(lados)+1;
+    }
+    public int getValorAtual(){
+        return valorAtual;
+    }
+    public void setValorAtual(int x){
+       valorAtual = x;
+    }
+}
+
+package classes;
+// Herda Jogador
+public class Cientista extends Jogador {
+    public Cientista(String nome) {
+        super(nome);
+        super.profissao = "Cientista";
+    }    
+    @Override
+    public void finalizar(){
+        Dado gerador = new Dado(2);
+        if(gerador.getValorAtual() == 0)
+        ganharPontos(2); // Todo cientista ganha 2 pontos ambientais por turno ou nenhum (50% de chance)       
+    }
+}
+
+package classes;
+// Herda Jogador
+public class Desempregado extends Jogador {
+    public Desempregado(String cor) {
+        super(cor);
+        super.profissao = "Desempregado";
+   } 
+    @Override
+    public void finalizar(){
+       avancar(1); // anda uma posição sempre no final do turno
+    }
+}
+
+package classes;
+// Herda Jogador
+public class Empresario extends Jogador {
+    public Empresario(String cor) {
+        super(cor);
+        super.profissao = "Empresário";
+        qntdEmpresa = 1;
+    }
+    @Override
+    public void finalizar() {
+        Dado gerador = new Dado(10);
+        gerador.rolar();
+        switch (gerador.getValorAtual()) { // todo empresário ganha 5 ou 10 ou perde 5 dinheiros por turno (80 % pra ganhar 5, 10 % pra perder 5, 10% pra ganhar 10
+            case 9:
+                receber(10);
+                break;
+            case 0:
+                receber(-5);
+                break;
+            default:
+                receber(5);
+                break;
+        }
+    }
+}
+
+package classes;
+// Classe abstrata
+public abstract class Jogador {
+    protected int qntdEmpresa, pontosAmbientais, posicao;
+    protected String cor, profissao;
+    protected int dinheiro;
+    protected boolean endividado, preso;
+    public Jogador(String cor) {
+        this.cor = cor;
+        posicao = 1;
+        dinheiro = 20;
+        qntdEmpresa = 0;
+        pontosAmbientais = 0;
+        endividado = false;
+        preso = false;
+    }
+    // o método avancar(x) serve para modificar sua posição, porém se estiver preso você não anda.
+    // não usamos no jogo final (ser preso), mas num futuro próximo talvez seja implementado
+    public void avancar(int qntdDeCasas) {
+        if (!preso) {
+            if (!endividado) {
+                posicao += qntdDeCasas;
+            } else {
+               posicao += qntdDeCasas - 2;  // Caso a pessoa esteja endividada irá andar menos casas.
+            }
+        }
+    }
+    // comentado pois, mesmo existindo a classe Empresa, ela não foi implementada no jogo.
+    /*public void venderEmpresa(Empresa nomeEmpresa) {
+    qntdEmpresa -= 1;
+    nomeEmpresa.setPropietario("Nenhum");
+    }
+    public void comprarEmpresa(Empresa nomeEmpresa) {
+    qntdEmpresa += 1;
+    nomeEmpresa.setPropietario(getCor());
+    }
+    public void pagarFianca() {
+    if (dinheiro >= 30 && preso) {
+    dinheiro -= 30;
+    preso = false;
+    }
+    }*/
+    // método para ganhar ou perder dinheiro
+    public void receber(int valor) {
+        dinheiro += valor;
+    }
+    // método para ganhar ou perder´pontos ambientais
+    public void ganharPontos(int valor) {
+        pontosAmbientais += valor;
+    }
+    // método finalizar() é o disparador quando termina o turno do jogador
+    // cada profissão ganha ou perde algo quando finaliza um turno (ver nas regras)
+    abstract public void finalizar();
+    public int getDinheiro() {
+        return dinheiro;
+    }
+    public int getPontosAmbientais() {
+        return pontosAmbientais;
+    }
+    public int getQntdEmpresa() {
+        return qntdEmpresa;
+    }
+    public String getCor() {
+        return cor;
+    }
+    public void setEndividado(boolean endividado) {
+        this.endividado = endividado;
+    }
+    public String getProfissao() {
+        return profissao;
+    }
+    public int getPosicao() {
+       return posicao;
+    }
+}
+
+package classes;
+import java.util.ArrayList;
+public class Evento {
+    private String enunciado, resultadoA, resultadoB, resultadoC, respostaJogador, profissao;
+    private String mensagemResultadoA, mensagemResultadoB, mensagemResultadoC;
+    private int valorAmbientalA, valorAmbientalB, valorAmbientalC;
+    private int valorDinheiroA, valorDinheiroB, valorDinheiroC;
+    private String grave;
+    private boolean exclusivo;
+    private static ArrayList<Evento> eventoContagem = new ArrayList<Evento>(); 
+    // O Arraylist acima serve pra guardar literalmente objetos da classe Evento para que no futuro
+    // seja escolhido um desses objetos aleatoriamente
+    //Construtor Evento: (Enunciado, Três resultados, Mensagem de cada resultado,
+    //Valores de dinheiro e PA ganhos, se negativo então perdas, opção que é considerada)
+    //grave se nenhuma então 0 e de 1 a 3 qual opção é e se for grave aumente o medidor de extinção
+    // Caso seja exclusivo de uma profissao deverá colocar no primeiro parâmetro tal profissão, se não coloque "Nenhuma"
+    // Exemplo jogo de nossa APS: Desempregado, Empresario e Cientista.
+    public Evento(String profissao, String enunciado, String resultadoA, String resultadoB,
+            String resultadoC, String mensagemResultadoA,
+            String mensagemResultadoB, String mensagemResultadoC, int valorAmbientalA,
+            int valorAmbientalB, int valorAmbientalC, int valorDinheiroA,
+            int valorDinheiroB, int valorDinheiroC, String grave) {
+        this.profissao = profissao;
+        exclusivo = true;
+        this.enunciado = enunciado;
+        this.resultadoA = resultadoA;
+        this.resultadoB = resultadoB;
+        this.resultadoC = resultadoC;
+        this.mensagemResultadoA = mensagemResultadoA;
+        this.mensagemResultadoB = mensagemResultadoB;
+        this.mensagemResultadoC = mensagemResultadoC;
+        this.valorAmbientalA = valorAmbientalA;
+        this.valorAmbientalB = valorAmbientalB;
+        this.valorAmbientalC = valorAmbientalC;
+        this.valorDinheiroA = valorDinheiroA;
+        this.valorDinheiroB = valorDinheiroB;
+        this.valorDinheiroC = valorDinheiroC;
+        switch (grave) {
+            case "1":
+                this.grave = this.mensagemResultadoA;
+                break;
+            case "2":
+                this.grave = this.mensagemResultadoB;
+                break;
+            case "3":
+                this.grave = this.mensagemResultadoC;
+                break;
+            default:
+                grave = "0";
+        }
+        eventoContagem.add(this);
+    }
+    public String getEnunciado() {
+        return enunciado;
+    }
+    public String getResultadoA() {
+        return resultadoA;
+    }
+    public String getResultadoB() {
+        return resultadoB;
+    }
+    public String getResultadoC() {
+        return resultadoC;
+    }
+    public String getRespostaJogador() {
+        return respostaJogador;
+    }
+    public void setRespostaJogador(String respostaJogador) {
+        this.respostaJogador = respostaJogador;
+    }
+    public int getValorAmbientalA() {
+        return valorAmbientalA;
+    }
+    public int getValorAmbientalB() {
+        return valorAmbientalB;
+    }
+    public int getValorAmbientalC() {
+        return valorAmbientalC;
+    }
+    public int getValorDinheiroA() {
+        return valorDinheiroA;
+    }
+    public int getValorDinheiroB() {
+        return valorDinheiroB;
+    }
+    public int getValorDinheiroC() {
+        return valorDinheiroC;
+    }
+    public String getProfissao() {
+        return profissao;
+    }
+    public boolean isExclusivo() {
+        return exclusivo;
+    }
+    public int getEventoContagemSize() {
+        return eventoContagem.size();
+    }
+    // método static pois tanto faz o evento que for chamado, vai depender do número dado no parâmetro
+    public static Evento getEvento(int x) {
+        return eventoContagem.get(x);
+    }
+    public String getGrave() {
+        return grave;
+    }
+    public String getMensagemResultadoA() {
+        return mensagemResultadoA;
+    }
+    public String getMensagemResultadoB() {
+        return mensagemResultadoB;
+    }
+    public String getMensagemResultadoC() {
+        return mensagemResultadoC;
+    }}
